@@ -5,13 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: 'https://api.tigerhall.net/v2/',
+  cache: new InMemoryCache(),
+});
+
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
   <StrictMode>
     <ColorModeScript />
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </StrictMode>
 );
 
