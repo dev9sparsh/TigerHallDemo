@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('./assets/fonts/PPNeueMontreal-Bold.otf') format('otf'),
+    url('./assets/fonts/PPNeueMontreal-Italic.otf') format('otf'),
+    url('./assets/fonts/PPNeueMontreal-Medium.otf') format('otf'),
+    url('./assets/fonts/PPNeueMontreal-SemiBolditalic.otf') format('otf'),
+    url('./assets/fonts/PPNeueMontreal-Thin.otf') format('otf');
+  /* Add any additional font properties if needed */
+}
