@@ -16,6 +16,7 @@ import { FiShare2 } from 'react-icons/fi';
 import { BsBookmark } from 'react-icons/bs';
 import { FaHeadphones, FaClock } from 'react-icons/fa';
 import { BsStopwatch } from 'react-icons/bs';
+import PropTypes from 'prop-types';
 
 const PodcastCard = ({ edgeTileInfo }) => {
   return (
@@ -142,3 +143,21 @@ const PodcastCard = ({ edgeTileInfo }) => {
 };
 
 export default PodcastCard;
+
+PodcastCard.propTypes = {
+  edgeTileInfo: PropTypes.shape({
+    image: PropTypes.shape({
+      uri: PropTypes.string
+    }),
+    title: PropTypes.string,
+    text: PropTypes.string,
+    name: PropTypes.string,
+    text2: PropTypes.string,
+    text23: PropTypes.string,
+    categories: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string
+      })
+    )
+  })
+};

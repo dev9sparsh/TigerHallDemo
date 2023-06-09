@@ -1,9 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 
 import { Input, SimpleGrid, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
+
+import PropTypes from 'prop-types';
 
 const useDebounce = (value, delay) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -44,7 +45,9 @@ const SearchToolBar = ({ ApiHook, LoaderHook }) => {
     <>
       <SimpleGrid w={{ base: '100%', sm: '50%', md: '50%' }} p="4">
         <InputGroup>
-          <InputLeftElement pointerEvents="none" children={<SearchIcon color="current" />} />
+          <InputLeftElement pointerEvents="none">
+            <SearchIcon color="current" />
+          </InputLeftElement>
           <Input
             placeholder="Search"
             size="md"
@@ -59,3 +62,8 @@ const SearchToolBar = ({ ApiHook, LoaderHook }) => {
 };
 
 export default SearchToolBar;
+
+SearchToolBar.propTypes = {
+  ApiHook: PropTypes.func.isRequired,
+  LoaderHook: PropTypes.func.isRequired
+};
