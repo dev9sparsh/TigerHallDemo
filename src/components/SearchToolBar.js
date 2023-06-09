@@ -8,6 +8,7 @@ import {
   InputLeftElement,
 } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
+import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
 const useDebounce = (value, delay) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -25,17 +26,18 @@ const useDebounce = (value, delay) => {
   return debouncedValue;
 };
 
-const SearchToolBar = ({ ApiHook}) => {
+const SearchToolBar = ({ ApiHook, LoaderHook }) => {
   let default_limit = 5;
   const [inputValue, setInputValue] = useState('');
   const debouncedValue = useDebounce(inputValue, 300);
 
-  // The Debouncing Hook Effect 
+  // The Debouncing Hook Effect
   useEffect(() => {
     if (debouncedValue) {
       ApiHook({
         variables: { limit: default_limit, searchKeyword: debouncedValue },
       });
+      LoaderHook(true);
     } else {
       ApiHook({
         variables: { limit: default_limit, searchKeyword: '' },
@@ -49,7 +51,7 @@ const SearchToolBar = ({ ApiHook}) => {
         <InputGroup>
           <InputLeftElement
             pointerEvents="none"
-            children={<SearchIcon color="white" />}
+            children={<SearchIcon color="current" />}
           />
           <Input
             placeholder="Search"
@@ -57,6 +59,7 @@ const SearchToolBar = ({ ApiHook}) => {
             value={inputValue}
             onChange={event => setInputValue(event.target.value)}
           />
+          <ColorModeSwitcher />
         </InputGroup>
       </SimpleGrid>
     </>
