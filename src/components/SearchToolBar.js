@@ -1,12 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 
-import {
-  Input,
-  SimpleGrid,
-  InputGroup,
-  InputLeftElement,
-} from '@chakra-ui/react';
+import { Input, SimpleGrid, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
@@ -35,12 +30,12 @@ const SearchToolBar = ({ ApiHook, LoaderHook }) => {
   useEffect(() => {
     if (debouncedValue) {
       ApiHook({
-        variables: { limit: default_limit, searchKeyword: debouncedValue },
+        variables: { limit: default_limit, searchKeyword: debouncedValue }
       });
       LoaderHook(true);
     } else {
       ApiHook({
-        variables: { limit: default_limit, searchKeyword: '' },
+        variables: { limit: default_limit, searchKeyword: '' }
       });
     }
   }, [debouncedValue]);
@@ -49,15 +44,12 @@ const SearchToolBar = ({ ApiHook, LoaderHook }) => {
     <>
       <SimpleGrid w={{ base: '100%', sm: '50%', md: '50%' }} p="4">
         <InputGroup>
-          <InputLeftElement
-            pointerEvents="none"
-            children={<SearchIcon color="current" />}
-          />
+          <InputLeftElement pointerEvents="none" children={<SearchIcon color="current" />} />
           <Input
             placeholder="Search"
             size="md"
             value={inputValue}
-            onChange={event => setInputValue(event.target.value)}
+            onChange={(event) => setInputValue(event.target.value)}
           />
           <ColorModeSwitcher />
         </InputGroup>

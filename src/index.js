@@ -9,7 +9,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 const client = new ApolloClient({
   uri: 'https://api.tigerhall.net/v2/',
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache()
 });
 
 const container = document.getElementById('root');
