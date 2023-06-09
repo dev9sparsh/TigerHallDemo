@@ -5,13 +5,14 @@ import {
   VStack,
   Grid,
   extendTheme,
+  ColorModeScript,
 } from '@chakra-ui/react';
 import PodCastSearch from './pages/PodCastSearch';
 
 const theme = extendTheme({
   config: {
     initialColorMode: 'dark',
-    useSystemColorMode: false,
+    useSystemColorMode: true,
   },
   fonts: {
     body: 'PPNeueMontreal, sans-serif',
@@ -49,13 +50,14 @@ const theme = extendTheme({
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box>
-        <Grid p={3}>
-          <VStack spacing={8}>
-            <PodCastSearch />
-          </VStack>
-        </Grid>
-      </Box>
+        <ColorModeScript  />
+        <Box>
+          <Grid p={3}>
+            <VStack spacing={8}>
+              <PodCastSearch />
+            </VStack>
+          </Grid>
+        </Box>
     </ChakraProvider>
   );
 }
