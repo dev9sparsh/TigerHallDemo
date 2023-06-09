@@ -30,15 +30,13 @@ const PodcastCard = ({ edgeTileInfo }) => {
             w="50%"
             p={[2, 4]}
             justifyContent={['center', 'flex-start']}
-            borderTopLeftRadius={['md', 'xl']}
-          >
+            borderTopLeftRadius={['md', 'xl']}>
             <FaClock fill="#ff5900" />
             <Heading
               as="h3"
               fontSize={['sm', 'md']}
               fontFamily="PPNeuePPNeueMontreal"
-              color="grey.600"
-            >
+              color="grey.600">
               30% Completed
             </Heading>
           </Flex>
@@ -55,8 +53,7 @@ const PodcastCard = ({ edgeTileInfo }) => {
               <Button
                 style={{ borderRadius: '20px', gap: '5px' }}
                 bg="Main.600"
-                _hover={{ bg: 'Secondary.Black' }}
-              >
+                _hover={{ bg: 'Secondary.Black' }}>
                 {' '}
                 <FaHeadphones fill="white" boxshadow="md" />
               </Button>
@@ -69,15 +66,13 @@ const PodcastCard = ({ edgeTileInfo }) => {
               <Button
                 style={{ borderRadius: '20px', gap: '5px' }}
                 bg="Secondary.Black"
-                _hover={{ bg: 'Main.600' }}
-              >
+                _hover={{ bg: 'Main.600' }}>
                 {' '}
                 <BsStopwatch fill="white" />
                 <Text
                   color={'Secondary.White'}
                   fontFamily="PPNeuePPNeueMontreal"
-                  fontSize={['sm', 'md']}
-                >
+                  fontSize={['sm', 'md']}>
                   20m
                 </Text>
               </Button>
@@ -100,8 +95,7 @@ const PodcastCard = ({ edgeTileInfo }) => {
           fontFamily="PPNeueMontreal"
           fontSize="md"
           color="grey.700"
-          fontWeight="normal"
-        >
+          fontWeight="normal">
           {edgeTileInfo.name.includes('audio')
             ? edgeTileInfo.name?.replace('audio ', '')
             : edgeTileInfo.name}
@@ -116,8 +110,7 @@ const PodcastCard = ({ edgeTileInfo }) => {
           color="grey.700"
           fontWeight={'normal'}
           fontFamily="PPNeueMontreal"
-          fontSize="md"
-        >
+          fontSize="md">
           {`${edgeTileInfo?.text23}`}
         </Heading>
         <SimpleGrid columns={[1, 2, 2, 3]} spacingX="5px" spacingY="5px" p={1}>
@@ -127,8 +120,7 @@ const PodcastCard = ({ edgeTileInfo }) => {
               as="h4"
               fontFamily="PPNeueMontreal"
               fontSize="md"
-              color="grey.700"
-            >
+              color="grey.700">
               {item.name.includes('category') ? item.name?.replace('category ', '') : item.name}
             </Heading>
           ))}
