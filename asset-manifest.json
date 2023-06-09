@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/TigerHillDemo/static/js/main.2a388566.js",
-    "static/js/787.2232220e.chunk.js": "/TigerHillDemo/static/js/787.2232220e.chunk.js",
-    "static/media/PPNeueMontreal-Medium.otf": "/TigerHillDemo/static/media/PPNeueMontreal-Medium.0f34f4714f1b26e0dedc.otf",
-    "static/media/PPNeueMontreal-Bold.otf": "/TigerHillDemo/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
-    "index.html": "/TigerHillDemo/index.html",
-    "main.2a388566.js.map": "/TigerHillDemo/static/js/main.2a388566.js.map",
-    "787.2232220e.chunk.js.map": "/TigerHillDemo/static/js/787.2232220e.chunk.js.map"
+    "main.js": "/TigerHallDemo/static/js/main.e842503d.js",
+    "static/js/787.2232220e.chunk.js": "/TigerHallDemo/static/js/787.2232220e.chunk.js",
+    "static/media/PPNeueMontreal-Medium.otf": "/TigerHallDemo/static/media/PPNeueMontreal-Medium.0f34f4714f1b26e0dedc.otf",
+    "static/media/PPNeueMontreal-Bold.otf": "/TigerHallDemo/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
+    "index.html": "/TigerHallDemo/index.html",
+    "main.e842503d.js.map": "/TigerHallDemo/static/js/main.e842503d.js.map",
+    "787.2232220e.chunk.js.map": "/TigerHallDemo/static/js/787.2232220e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.2a388566.js"
+    "static/js/main.e842503d.js"
   ]
 }
