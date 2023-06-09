@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.js": "/TigerHillDemo/static/js/main.d0a053c8.js",
+    "main.js": "/TigerHillDemo/static/js/main.2a388566.js",
     "static/js/787.2232220e.chunk.js": "/TigerHillDemo/static/js/787.2232220e.chunk.js",
+    "static/media/PPNeueMontreal-Medium.otf": "/TigerHillDemo/static/media/PPNeueMontreal-Medium.0f34f4714f1b26e0dedc.otf",
+    "static/media/PPNeueMontreal-Bold.otf": "/TigerHillDemo/static/media/PPNeueMontreal-Bold.34a4eb1a093eb36b2f46.otf",
     "index.html": "/TigerHillDemo/index.html",
-    "main.d0a053c8.js.map": "/TigerHillDemo/static/js/main.d0a053c8.js.map",
+    "main.2a388566.js.map": "/TigerHillDemo/static/js/main.2a388566.js.map",
     "787.2232220e.chunk.js.map": "/TigerHillDemo/static/js/787.2232220e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.d0a053c8.js"
+    "static/js/main.2a388566.js"
   ]
 }
