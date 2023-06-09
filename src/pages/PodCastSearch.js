@@ -30,20 +30,22 @@ const PodCastSearch = () => {
               // here hardcoding some texts for display Purpose.
               text: `${
                 item.experts?.length > 0
-                  ? `Peak Performance: Going From Good to Great with ${item?.experts[0].firstName} ${item?.experts[0].lastName}`
-                  : `Peak Performance: Going From Good to Great.`
+                  ? `Peak Performance: Going From Good to Great with ${
+                      item?.experts[0].firstName || 'Simon'
+                    } ${item?.experts[0].lastName || 'Taudel'}`
+                  : `Peak Performance: Going From Good to Great with Simon Taudel.`
               }`,
               text2: `${
                 item.experts?.length > 0
                   ? `${item?.experts[0]?.company || 'Subway'} ${
                       item?.experts[0]?.title || 'APAC'
                     }`
-                  : `Peak Performance Going From Good to Great.`
+                  : `Subway APAC.`
               }`,
               text23: `${
                 item.experts?.length > 0
                   ? `${item?.experts[0].firstName} ${item?.experts[0].lastName}`
-                  : `Peak Performance Going From Good to Great.`
+                  : `Jane Doe.`
               }`,
               title: `communicating as a leader`,
             };

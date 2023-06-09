@@ -123,19 +123,15 @@ const PodcastCard = ({ edgeTileInfo }) => {
           {edgeTileInfo.text2}
         </Heading>
 
-        {edgeTileInfo?.experts &&
-          Array.isArray(edgeTileInfo?.experts) &&
-          edgeTileInfo?.experts?.length > 0 && (
-            <Heading
-              as="h2"
-              color="grey.700"
-              fontWeight={'normal'}
-              fontFamily="PPNeueMontreal"
-              fontSize="md"
-            >
-              {`${edgeTileInfo?.experts[0].firstName} ${edgeTileInfo?.experts[0].lastName}`}
-            </Heading>
-          )}
+        <Heading
+          as="h2"
+          color="grey.700"
+          fontWeight={'normal'}
+          fontFamily="PPNeueMontreal"
+          fontSize="md"
+        >
+          {`${edgeTileInfo?.text23}`}
+        </Heading>
         <SimpleGrid columns={[1, 2, 2, 3]} spacingX="5px" spacingY="5px" p={1}>
           {edgeTileInfo?.categories.map(item => (
             <Heading
