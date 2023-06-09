@@ -1,14 +1,12 @@
 import React from 'react';
 import { ChakraProvider, Box, VStack, Grid, extendTheme, ColorModeScript } from '@chakra-ui/react';
 import PodCastSearch from './pages/PodCastSearch';
+import FontStyle from './FontStyle';
 
 const theme = extendTheme({
   config: {
     initialColorMode: 'dark',
     useSystemColorMode: true
-  },
-  fonts: {
-    body: 'PPNeueMontreal, sans-serif'
   },
   colors: {
     Main: {
@@ -44,6 +42,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <ColorModeScript />
+      <FontStyle />
       <Box>
         <Grid p={3}>
           <VStack spacing={8}>

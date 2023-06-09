@@ -33,11 +33,7 @@ const PodcastCard = ({ edgeTileInfo }) => {
             justifyContent={['center', 'flex-start']}
             borderTopLeftRadius={['md', 'xl']}>
             <FaClock fill="#ff5900" />
-            <Heading
-              as="h3"
-              fontSize={['sm', 'md']}
-              fontFamily="PPNeuePPNeueMontreal"
-              color="grey.600">
+            <Heading as="h3" fontSize={['sm', 'md']} fontFamily="PPNeueMontreal" color="grey.600">
               30% Completed
             </Heading>
           </Flex>
@@ -70,10 +66,7 @@ const PodcastCard = ({ edgeTileInfo }) => {
                 _hover={{ bg: 'Main.600' }}>
                 {' '}
                 <BsStopwatch fill="white" />
-                <Text
-                  color={'Secondary.White'}
-                  fontFamily="PPNeuePPNeueMontreal"
-                  fontSize={['sm', 'md']}>
+                <Text color={'Secondary.White'} fontFamily="PPNeueMontreal" fontSize={['sm', 'md']}>
                   20m
                 </Text>
               </Button>
@@ -83,11 +76,21 @@ const PodcastCard = ({ edgeTileInfo }) => {
       </Box>
 
       <Box as="article" p={4}>
-        <Heading as="h1" fontSize="md" fontFamily="PPNeuePPNeueMontreal" color="grey.600">
+        <Heading
+          as="h1"
+          fontSize="md"
+          fontFamily="PPNeueMontreal"
+          fontWeight="400"
+          color="grey.600">
           {edgeTileInfo.title?.toUpperCase()}
         </Heading>
 
-        <Heading as="h1" fontFamily="PPNeuePPNeueMontreal" fontSize="2xl" color="Secondary.Black">
+        <Heading
+          as="h1"
+          fontFamily="PPNeueMontreal"
+          fontWeight="700"
+          fontSize="2xl"
+          color="Secondary.Black">
           {edgeTileInfo.text}
         </Heading>
 
@@ -96,20 +99,25 @@ const PodcastCard = ({ edgeTileInfo }) => {
           fontFamily="PPNeueMontreal"
           fontSize="md"
           color="grey.700"
-          fontWeight="normal">
+          fontWeight="400">
           {edgeTileInfo.name.includes('audio')
             ? edgeTileInfo.name?.replace('audio ', '')
             : edgeTileInfo.name}
         </Heading>
 
-        <Heading as="h2" fontFamily="PPNeueMontreal" fontSize="xl" color="grey.700">
+        <Heading
+          as="h2"
+          fontFamily="PPNeueMontreal"
+          fontWeight="700"
+          fontSize="lg"
+          color="grey.700">
           {edgeTileInfo.text2}
         </Heading>
 
         <Heading
           as="h2"
           color="grey.700"
-          fontWeight={'normal'}
+          fontWeight={'400'}
           fontFamily="PPNeueMontreal"
           fontSize="md">
           {`${edgeTileInfo?.text23}`}
@@ -120,6 +128,7 @@ const PodcastCard = ({ edgeTileInfo }) => {
               key={item?.name}
               as="h4"
               fontFamily="PPNeueMontreal"
+              fontWeight={'400'}
               fontSize="md"
               color="grey.700">
               {item.name.includes('category') ? item.name?.replace('category ', '') : item.name}
