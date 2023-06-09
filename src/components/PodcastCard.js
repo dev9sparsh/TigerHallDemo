@@ -9,6 +9,7 @@ import {
   Heading,
   Flex,
   Spacer,
+  Text,
 } from '@chakra-ui/react';
 
 import { FiShare2 } from 'react-icons/fi';
@@ -76,7 +77,8 @@ const PodcastCard = ({ edgeTileInfo }) => {
               >
                 {' '}
                 <BsStopwatch fill="white" />
-                20m
+                <Text color={'Secondary.White'} fontFamily="PPNeuePPNeueMontreal" fontSize={['sm', 'md']}>20m</Text>
+                
               </Button>
             </Box>
           </Flex>
