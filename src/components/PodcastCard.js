@@ -75,7 +75,7 @@ const PodcastCard = ({ edgeTileInfo }) => {
                 _hover={{ bg: 'Main.600' }}
               >
                 {' '}
-                <BsStopwatch color="Secondary.White" />
+                <BsStopwatch fill="white" />
                 20m
               </Button>
             </Box>
